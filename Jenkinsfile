@@ -6,6 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                args '-v /root/.m2:/root/.m2'
 
             }
         }
