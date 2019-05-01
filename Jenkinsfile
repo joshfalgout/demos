@@ -1,12 +1,15 @@
 pipeline {
-    agent { dockerfile true }
+    agent { 
+        dockerfile true 
+        args '-v /root/.m2:/root/.m2'    
+    }
     
     
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-                args '-v /root/.m2:/root/.m2'
+                docker build . -t "custom:latest" 
 
             }
         }
