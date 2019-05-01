@@ -1,5 +1,5 @@
 pipeline {
-    agent { dockerfile {-id} }
+    agent { dockerfile {args '-id'} }
     
     
     stages {
